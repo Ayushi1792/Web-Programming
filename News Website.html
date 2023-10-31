@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="main-nav container flex">
+        <a href="#" onclick="reload()"class="logo">
+          <img src="newsapp.jpg" alt="newslogo" />
+        </a>
+        <div class="headers">
+          <ul class="flex">
+            <li
+              class="hover-link nav-item"
+              id="entertainment"
+              onclick="onNavItemClick('entertainment')"
+            >
+              Entertainment
+            </li>
+            <li
+              class="hover-link nav-item"
+              id="sports"
+              onclick="onNavItemClick('sports')"
+            >
+              Sports
+            </li>
+            <li
+              class="hover-link nav-item"
+              id="politics"
+              onclick="onNavItemClick('politics')"
+            >
+              Politics
+            </li>
+          </ul>
+        </div>
+        <div class="search-bar flex">
+          <input id="search-text" type="text" class="news-input" placeholder="e.g. Science" />
+          <button id="search-button" class="search">Search</button>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="cards-container container flex" id="cards-container">
+      </div>
+    </main>
+
+        <template id="template-news">
+          <div class="card">
+            <div class="card-header">
+              <img
+                id="news-img"
+                src="https://via.placeholder.com/400x200"
+                alt="news-img"
+              />
+            </div>
+            <div class="card-content">
+              <h3 id="news-title">This is the Title!</h3>
+              <h6 class="news-source" id="news-source">
+                End Gadget 26/10/2023
+              </h6>
+              <p class="news-desc" id="news-desc">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio
+                et cum eligendi sunt velit culpa ea quisquam earum doloribus!
+                Molestiae ut assumenda veniam quis sunt minus velit ducimus
+                repudiandae officiis.
+              </p>
+            </div>
+          </div>
+        </template>
+      
+
+    <script src="main.js"></script>
+  </body>
+</html>
